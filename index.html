@@ -1,41 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>PVP Foundation</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+:root {
+  --blue: #1f4fa3;
+  --red: #d62828;
+  --gold: #f4b400;
+  --light: #f7f9fc;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, var(--blue), var(--red));
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+.hero {
+  background: var(--light);
+  text-align: center;
+}
+
+h2 {
+  color: var(--blue);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 22px;
+  background: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: white;
+  border-left: 4px solid var(--gold);
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+.members {
+  background: var(--light);
+}
+
+.member-card {
+  background: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: .9rem;
+}
+</style>
 </head>
 
 <body>
 
-<header class="hero">
+<header>
+  <img src="assets/logo.png" alt="PVP Foundation Logo" />
   <h1>PVP Foundation</h1>
-  <p>Empowering communities through technology.</p>
-  <a class="button" href="#about">Learn more</a>
+  <p>For the Education. By the Education.</p>
 </header>
 
-<main>
+<section class="hero">
+  <h2>Celebrating Students. Encouraging Futures.</h2>
+  <p>
+    PVP Foundation is a nonprofit organization that recognizes student achievements
+    and motivates young minds through appreciation, laurels, and academic encouragement.
+  </p>
 
-<section id="about">
-<h2>About</h2>
-<p>
-PVP Foundation is focused on creating impact through education,
-technology, and community programs.
-</p>
+  <a class="button" href="#contact">Get Involved</a>
 </section>
 
 <section>
-<h2>Contact</h2>
-<p>
-Email us at
-<a href="mailto:admin@pvpfoundation.com">admin@pvpfoundation.com</a>
-</p>
+  <h2>About Us</h2>
+  <p>
+    We believe recognition builds confidence. PVP Foundation works with schools and
+    communities to celebrate students for effort, discipline, and improvement.
+  </p>
+
+  <p>
+    By honoring learners early, we help shape resilient, ambitious futures.
+  </p>
 </section>
 
-</main>
+<section>
+  <h2>Our Mission</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🎓 Recognize</h3>
+      <p>Honor students for academic effort and progress.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌱 Encourage</h3>
+      <p>Motivate learners by acknowledging potential.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏆 Celebrate</h3>
+      <p>Award laurels that reinforce confidence and ambition.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>What We Do</h2>
+  <ul>
+    <li>Student recognition programs</li>
+    <li>Merit-based awards and laurels</li>
+    <li>Academic encouragement initiatives</li>
+    <li>Community-driven education support</li>
+  </ul>
+</section>
+
+<section class="members">
+  <h2>Our Members</h2>
+
+  <div class="grid">
+    <div class="member-card">
+      <h3>Mohan</h3>
+      <p><strong>President</strong></p>
+      <p>
+        Leads the foundation’s vision of empowering students through recognition
+        and educational support.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Partner with us or support our mission.</p>
+  <a class="button" href="mailto:admin@pvpfoundation.com">
+  admin@pvpfoundation.com
+</a>
+
+</section>
 
 <footer>
-<p>© 2026 PVP Foundation</p>
+  © 2026 PVP Foundation. All rights reserved.
 </footer>
 
 </body>

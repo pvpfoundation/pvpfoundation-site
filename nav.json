@@ -1,0 +1,5 @@
+[
+  { "label": "Home", "url": "index.html" },
+  { "label": "About", "url": "about.html" },
+  { "label": "News", "url": "news.html" }
+]

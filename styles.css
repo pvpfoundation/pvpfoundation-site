@@ -1,0 +1,213 @@
+:root {
+  --blue: #1f4fa3;
+  --red: #d62828;
+  --gold: #f4b400;
+  --light: #f7f9fc;
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* HEADER / BANNER */
+
+header {
+  background: linear-gradient(135deg, var(--blue), var(--red));
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header img {
+  max-width: 120px;
+  margin-bottom: .5rem;
+}
+
+/* NAV */
+
+.nav-wrapper {
+  background: var(--light);
+  border-bottom: 1px solid #ddd;
+}
+
+#site-nav {
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+#site-nav a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+#site-nav a:hover {
+  text-decoration: underline;
+}
+
+#site-nav a.active {
+  border-bottom: 2px solid var(--blue);
+}
+
+/* SECTIONS */
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+}
+
+section + section {
+  padding-top: 0;
+}
+
+
+.hero {
+  background: var(--light);
+  text-align: center;
+}
+
+h2 {
+  color: var(--blue);
+  margin-top: 0;
+}
+
+/* BUTTON */
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 22px;
+  background: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* CARDS */
+
+.card {
+  background: white;
+  border-left: 4px solid var(--gold);
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  margin-bottom: 0;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  transition: .15s ease;
+}
+
+/* TEAM GRID */
+
+.grid.team-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* MEMBERS */
+
+.members {
+  background: var(--light);
+}
+
+.member-card {
+  background: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+.member-card h3 {
+  margin-top: 0;
+}
+
+/* CTA */
+
+.page-cta {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* FOOTER */
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: .9rem;
+}
+
+footer a {
+  color: white;
+}
+
+/* MOBILE TWEAKS */
+
+@media (max-width: 600px) {
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  header {
+    padding: 1.5rem 1rem;
+  }
+}
+/* News article layout */
+
+.news-item {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .news-item {
+    grid-template-columns: 320px 1fr;
+    align-items: start;
+  }
+}
+
+.news-image {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+
+.news-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: .5rem;
+}
+
+.news-content h3 {
+  margin-top: 0;
+}

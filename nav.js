@@ -1,13 +1,14 @@
-fetch("nav.json")
-  .then(res => res.json())
-  .then(data => {
-    const nav = document.getElementById("site-nav");
+function initNav() {
 
-    data.forEach(item => {
-      const link = document.createElement("a");
-      link.href = item.url;
-      link.textContent = item.label;
-      link.style.marginRight = "15px";
-      nav.appendChild(link);
-    });
+  const links = document.querySelectorAll("#site-nav a");
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href === currentPage) {
+      link.classList.add("active");
+    }
   });
+
+}

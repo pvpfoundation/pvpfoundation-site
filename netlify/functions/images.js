@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 
 exports.handler = async function () {
-  const directoryPath = path.join(process.cwd(), "images");
-
   try {
+    const directoryPath = path.join(__dirname, "../../images");
+
     const files = fs.readdirSync(directoryPath)
       .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file));
 
@@ -12,10 +12,11 @@ exports.handler = async function () {
       statusCode: 200,
       body: JSON.stringify(files),
     };
+
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Unable to scan directory" }),
+      body: JSON.stringify({ error: "Unable to scan directory", details: err.message }),
     };
   }
 };

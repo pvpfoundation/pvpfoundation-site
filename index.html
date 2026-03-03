@@ -8,15 +8,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body>
-<div id="layout-header"></div>
-
-<script src="layout.js"></script>
-<script src="nav.js"></script>
 
 <div id="layout-header"></div>
-
 <script src="layout.js"></script>
 <script src="nav.js"></script>
 
@@ -30,29 +24,25 @@
   </p>
   <a class="button" href="#contact">Get involved</a>
 </section>
-</br>
-<!-- IMAGE SLIDER (AUTO-LOAD FROM /images FOLDER) -->
+
+<!-- IMAGE SLIDER -->
 
 <section class="hero-slider">
-
   <div class="slides"></div>
 
   <div class="slider-controls">
     <button class="slider-btn prev">←</button>
     <button class="slider-btn next">→</button>
   </div>
-
 </section>
 
-<!-- MISSION QUOTE -->
+<!-- MISSION -->
 
 <section class="mission">
   <p class="lead" style="text-align:center;">
     ஒருமைக்கண் தான்கற்ற கல்வி ஒருவற்கு<br>
     எழுமையும் ஏமாப் புடைத்து.
   </p>
-</section>
-
 
   <p class="muted" style="text-align:center; margin-top:.5rem;">
     The education one gains in this life becomes a lifelong safeguard through every stage of life.
@@ -146,7 +136,7 @@
   © 2026 PVP Foundation. All rights reserved.
 </footer>
 
-<!-- NETLIFY AUTO-IMAGE SLIDER SCRIPT -->
+<!-- SLIDER SCRIPT -->
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -157,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!slidesContainer) return;
 
-  fetch("/.netlify/functions/images")
+  fetch("/images.json")
     .then(res => res.json())
     .then(images => {
 
